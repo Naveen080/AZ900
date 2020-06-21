@@ -20,11 +20,11 @@ In this task, we will create a Windows Server 2019 Datacenter virtual machine.
     | Settings | Values |
     |  -- | -- |
     | Subscription | **Choose your subscription**|
-    | Resource group | **myRGSecure** (create new) |
-    | Virtual machine name | **SimpleWinVM** |
+    | Resource group | **myRGSecure[yourname]** (create new) |
+    | Virtual machine name | **SimpleWinVM[yourname]** |
     | Location | **(US) East US**|
     | Image | **Windows Server 2019 Datacenter**|
-    | Size | **Standard D2s v3**|
+    | Size | **Standard DS1_V2**|
     | Administrator account username | **azureuser** |
     | Administrator account password | **Pa$$w0rd1234**|
     | Inbound port rules | **None**|
@@ -52,7 +52,7 @@ In this task, we will create a Windows Server 2019 Datacenter virtual machine.
 
 9. From the deployment blade or from the Notification area, click **Go to resource**. 
 
-10. On the **SimpleWinVM** virtual machine blade, click **Networking**, review the **Inbound port rules** tab, and note that there is no network security group associated with the network interface of the virtual machine or the subnet to which the network interface is attached.
+10. On the **SimpleWinVM[yourname]** virtual machine blade, click **Networking**, review the **Inbound port rules** tab, and note that there is no network security group associated with the network interface of the virtual machine or the subnet to which the network interface is attached.
 
     **Note**: Identify the name of the network interface. You will need it in the next task.
 
@@ -67,7 +67,7 @@ In this task, we will create a network security group and associate it with the 
     | Setting | Value |
     | -- | -- |
     | Subscription | **Choose your subscription** |
-    | Resource group | **myRGSecure** |
+    | Resource group | **myRGSecure[yourname]** |
     | Name | **myNSGSecure** |
     | Region | **(US) East US**  |
     | | |
@@ -84,7 +84,7 @@ In this task, we will create a network security group and associate it with the 
 
 In this task, we will allow RDP traffc to the virtual machine by configuring an inbound security port rule. 
 
-1. In the Azure portal, navigate to the blade of the **SimpleWinVM** virtual machine. 
+1. In the Azure portal, navigate to the blade of the **SimpleWinVM[yourname]** virtual machine. 
 
 2. On the **Overview** pane, click **Connect**.
 
@@ -122,7 +122,7 @@ In this task, we will create a NSG outbound port rule that will deny Internet ac
 
     **Note**: We will now configure a rule to deny outbound internet access. 
 
-4. In the Azure portal, navigate back to the blade of the **SimpleWinVM** virtual machine. 
+4. In the Azure portal, navigate back to the blade of the **SimpleWinVM[yourname]** virtual machine. 
 
 5. Under **Settings**, click **Networking**, and then **Outbound port rules**.
 
